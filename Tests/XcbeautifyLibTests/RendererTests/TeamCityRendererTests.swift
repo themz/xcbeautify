@@ -9,6 +9,7 @@
 
 import Testing
 @testable import XcbeautifyLib
+import XcLogParserLib
 
 @Suite struct TeamCityRendererTests {
     private let parser = Parser()

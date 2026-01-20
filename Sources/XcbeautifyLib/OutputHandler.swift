@@ -8,9 +8,10 @@
 //
 
 import Foundation
+public import XcLogParserLib
 
 /// Filters formatted output by `OutputType` only if `quiet` or `quieter` are specified.
-package final class OutputHandler {
+public class OutputHandler {
     let quiet: Bool
     let quieter: Bool
     let isCI: Bool
@@ -33,7 +34,7 @@ package final class OutputHandler {
         self.writer = writer
     }
 
-    package func write(_ type: OutputType, _ content: String?) {
+    public func write(_ type: OutputType, _ content: String?) {
         guard let content else { return }
 
         if !quiet, !quieter {

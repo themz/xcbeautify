@@ -10,6 +10,7 @@
 import Foundation
 import Testing
 @testable import XcbeautifyLib
+import XcLogParserLib
 
 @Suite struct UniqueCaptureGroupTests {
     private let captureGroupTypes = Parser().__for_test__captureGroupTypes()

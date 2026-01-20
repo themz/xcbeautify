@@ -10,6 +10,7 @@
 import Foundation
 import Testing
 @testable import XcbeautifyLib
+import XcLogParserLib
 
 @Suite struct ParsingTests {
     // These test cases use magic numbers to represent the number of lines that aren't captured by the Parser.

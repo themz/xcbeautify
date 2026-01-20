@@ -9,6 +9,7 @@
 
 import Testing
 @testable import XcbeautifyLib
+import XcLogParserLib
 
 @Suite struct CaptureGroupTests {
     @Test func swiftCompiling() {

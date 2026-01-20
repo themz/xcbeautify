@@ -10,7 +10,7 @@
 import Foundation
 
 /// Maps raw `xcodebuild` output to a `CaptureGroup`.
-package final class Parser {
+public final class Parser {
     private lazy var captureGroupTypes: [any CaptureGroup.Type] = [
         // START SORT
         AggregateTargetCaptureGroup.self,
@@ -146,19 +146,19 @@ package final class Parser {
     ]
 
     #if DEBUG
-    func __for_test__captureGroupTypes() -> [any CaptureGroup.Type] {
+    public func __for_test__captureGroupTypes() -> [any CaptureGroup.Type] {
         captureGroupTypes
     }
     #endif
 
     // MARK: - Init
 
-    package init() { }
+    public init() { }
 
     /// Maps raw `xcodebuild` output to a `CaptureGroup`.
     /// - Parameter line: The raw `xcodebuild` output.
     /// - Returns: The `CaptureGroup` if `line` is recognized. Otherwise, `nil`.
-    package func parse(line: String) -> (any CaptureGroup)? {
+    public func parse(line: String) -> (any CaptureGroup)? {
         if line.isEmpty {
             return nil
         }
